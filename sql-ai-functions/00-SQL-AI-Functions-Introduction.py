@@ -70,11 +70,6 @@
 # COMMAND ----------
 
 # MAGIC %md
-# MAGIC ### Optional: If you cannot access a foundation model, follow the instructions in the notebook [04-Extra-setup-external-model-OpenAI]($./04-Extra-setup-external-model-OpenAI) to use an OpenAI model instead. 
-
-# COMMAND ----------
-
-# MAGIC %md
 # MAGIC ## Further Reading and Resources
 # MAGIC - [Documentation](https://docs.databricks.com/en/large-language-models/ai-query-external-model.html)
 # MAGIC - [Introducing AI Functions: Integrating Large Language Models with Databricks SQL](https://www.databricks.com/blog/2023/04/18/introducing-ai-functions-integrating-large-language-models-databricks-sql.html)
