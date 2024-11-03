@@ -1,5 +1,9 @@
 # Databricks notebook source
-# MAGIC %pip install mlflow lxml langchain databricks-vectorsearch cloudpickle databricks-sdk cloudpickle pydantic datasets transformers langchain-databricks langchain-community
+# MAGIC %pip install mlflow lxml langchain databricks-vectorsearch cloudpickle databricks-sdk cloudpickle pydantic datasets transformers langchain-databricks langchain-community --upgrade
+
+# COMMAND ----------
+
+dbutils.library.restartPython()
 
 # COMMAND ----------
 
