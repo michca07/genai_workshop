@@ -37,7 +37,7 @@ def download_pdf(url, folder='downloaded_pdfs'):
         print(f"Error downloading {url}: {str(e)}")
     return False
 
-def find_pdfs(url, visited=None):
+def find_pdfs(url, visited=None, folder='downloaded_pdfs'):
     """Recursively find all PDF links on the website"""
     if visited is None:
         visited = set()
@@ -68,25 +68,10 @@ def find_pdfs(url, visited=None):
             
             # Download if it's a PDF
             if full_url.lower().endswith('.pdf'):
-                download_pdf(full_url)
+                download_pdf(full_url, folder)
             # # Recursively visit other pages on the same domain
             # elif is_valid_url(full_url) and full_url not in visited:
             #     find_pdfs(full_url, visited)
                 
     except Exception as e:
         print(f"Error processing {url}: {str(e)}")
-
-def main():
-    # Set up argument parser
-    parser = argparse.ArgumentParser(description='Crawl a website for PDF files')
-    parser.add_argument('--url', type=str, 
-                      default='https://www.cn.ca/en/supplier-portal/supplier-portal/policies-and-guidelines',
-                      help='Base URL to start crawling from')
-    
-    args = parser.parse_args()
-    print(f"Starting PDF crawler for {args.url}...")
-    find_pdfs(args.url)
-    print("Finished crawling for PDFs")
-
-if __name__ == "__main__":
-    main()
